@@ -1,0 +1,115 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  position: fixed;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.02);
+
+  width: 100%;
+
+  padding: 1rem;
+
+  font-family: var(--font-base);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    @media screen and (min-width: 1200px) {
+      max-width: 1200px;
+    }
+    @media screen and (min-width: 992px) and (max-width: 1200px) {
+      max-width: 992px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+      max-width: 768px;
+    }
+    @media screen and (min-width: 576px) and (max-width: 768px) {
+      max-width: 576px;
+    }
+
+    // @media screen and (min-width: var(--breakpoint-xl)) {
+    //   max-width: 1200px;
+    // }
+    // @media screen and (min-width: var(--breakpoint-lg)) and (max-width: var(--breakpoint-xl)) {
+    //   max-width: 992px;
+    // }
+    // @media screen and (min-width: var(--breakpoint-md)) and (max-width: var(--breakpoint-lg)) {
+    //   max-width: 768px;
+    // }
+    // @media screen and (min-width: var(--breakpoint-sm)) and (max-width: var(--breakpoint-md)) {
+    //   max-width: 576px;
+    // }
+  }
+
+  &__logo {
+    img {
+      width: 250px;
+      height: auto;
+    }
+  }
+
+  &__navigation {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    &-links {
+      display: flex;
+
+      li {
+        position: relative;
+
+        padding: 0.7rem 1.4rem;
+
+        text-transform: uppercase;
+
+        div {
+          display: none;
+
+          position: absolute;
+          top: 0;
+          left: calc(50% - 5px);
+
+          width: 10px;
+          height: 10px;
+
+          border-radius: 50%;
+
+          background-color: var(--secondary-color);
+        }
+
+        &:hover {
+          color: var(--secondary-color);
+          div {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1),
+      transparent
+    );
+    content: "";
+  }
+}
