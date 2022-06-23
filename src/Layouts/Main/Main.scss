@@ -1,0 +1,13 @@
+.main {
+  position: relative;
+  height: 100vh;
+
+  &__background-video {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    position: absolute;
+    z-index: 0;
+  }
+}

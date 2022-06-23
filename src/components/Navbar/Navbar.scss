@@ -4,10 +4,11 @@
   align-items: center;
   background-color: transparent;
 
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   position: fixed;
   border-bottom: 1px solid rgba(0, 0, 0, 0.02);
+  z-index: 9999;
 
   width: 100%;
 
@@ -38,8 +39,18 @@
 
   &__logo {
     img {
-      width: 250px;
+      vertical-align: top;
+
       height: auto;
+      width: 250px;
+
+      @media screen and (max-width: 992px) {
+        width: 190px;
+      }
+
+      @media screen and (max-width: 576px) {
+        width: 120px;
+      }
     }
   }
 
