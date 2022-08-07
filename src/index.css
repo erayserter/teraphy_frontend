@@ -39,6 +39,12 @@
   list-style: none;
 }
 
+button {
+  display: block;
+  border: none;
+  background-color: transparent;
+}
+
 a {
   text-decoration: none;
   color: inherit;

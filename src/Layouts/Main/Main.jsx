@@ -1,16 +1,11 @@
-import React, { useState } from "react";
-import TextField from "@mui/material/TextField";
-import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import React from "react";
 
 import { images } from "../../constants";
+import DatePicker from "../../UI/InputComponents/DatePicker/DatePicker";
 
 import "./Main.scss";
 
 const Main = (props) => {
-  const [enterDate, setEnterDate] = useState();
-
   return (
     <main id="home" className="main">
       <video
@@ -26,18 +21,12 @@ const Main = (props) => {
         />
       </video>
       <div className="main__reservation-container app__flex">
-        <LocalizationProvider dateAdapter={AdapterDateFns}>
-          <DatePicker
-            label="Basic example"
-            value={enterDate}
-            onChange={(newDate) => {
-              setEnterDate(newDate);
-            }}
-            renderInput={(params) => <TextField {...params} />}
-          />
-        </LocalizationProvider>
-        {/* <button></button>
-        <button></button> */}
+        <div className="reservation__check-in-date">
+          <DatePicker placeholder="CHECK-IN" />
+        </div>
+        <div className="reservation__check-out-date">
+          <DatePicker placeholder="CHECK-OUT" />
+        </div>
       </div>
     </main>
   );

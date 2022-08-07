@@ -1,13 +1,21 @@
 .main {
   position: relative;
-  height: 100vh;
 
   &__background-video {
     object-fit: cover;
     width: 100%;
     height: auto;
     max-height: 100vh;
-    position: absolute;
     z-index: 0;
+  }
+
+  &__reservation-container {
+    gap: 1.5rem;
+
+    position: absolute;
+    bottom: 3rem;
+    padding: 0 5rem;
+
+    width: 100%;
   }
 }
