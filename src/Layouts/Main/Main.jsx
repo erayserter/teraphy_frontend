@@ -1,7 +1,7 @@
 import React from "react";
+import RezervationBar from "../../components/RezervationBar/RezervationBar";
 
 import { images } from "../../constants";
-import DatePicker from "../../UI/InputComponents/DatePicker/DatePicker";
 
 import "./Main.scss";
 
@@ -20,14 +20,7 @@ const Main = (props) => {
           type="video/mp4"
         />
       </video>
-      <div className="main__reservation-container app__flex">
-        <div className="reservation__check-in-date">
-          <DatePicker placeholder="CHECK-IN" />
-        </div>
-        <div className="reservation__check-out-date">
-          <DatePicker placeholder="CHECK-OUT" />
-        </div>
-      </div>
+      <RezervationBar />
     </main>
   );
 };

@@ -7,7 +7,7 @@ import "./Navbar.scss";
 
 const SECTIONS = ["home", "about", "suits", "testimonials", "offers", "galery"];
 
-const Navbar = (props) => {
+const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
@@ -29,10 +29,14 @@ const Navbar = (props) => {
           </ul>
           <div className="navbar__contact">
             <div className="navbar__contact-location app__flex">
-              <img src="https://img.icons8.com/ios/50/undefined/marker--v2.png" />
+              <img
+                src="https://img.icons8.com/ios/50/undefined/marker--v2.png"
+                alt=""
+              />
               <a
                 target="_blank"
                 href="https://www.google.com.tr/maps/place/Villa+Therapy/@36.2596816,29.4298438,19.17z/data=!4m5!3m4!1s0x14c1d327c63a9831:0x66b1d2bee0eceaba!8m2!3d36.2599089!4d29.4299934?hl=en&amp;authuser=0"
+                rel="noreferrer"
               >
                 Villa Therapy, Kaş, Kalkan
               </a>
